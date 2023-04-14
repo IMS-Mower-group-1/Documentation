@@ -65,9 +65,21 @@
   - **Code:** `500`
   - **Content:** `{ error: "Internal server error" }`
 
+### 2. Get position
+
+- **URL:** `https://tgin13-1-q1387758.deta.app/position/:id`
+- **Method:** `GET`
+- **URL Params:** `id=[string]` (Mower ID)
+- **Success Response:**
+  - **Code:** `200`
+  - **Content:** `"(x,y)"` (Current position as a string) 
+- **Error Response:**
+  - **Code:** `500`
+  - **Content:** `{ error: "Internal server error" }`
+
 ## Image
 
-### 2. Upload image
+### 1. Upload image
 
 - **URL:** `/upload/:mowerID/:mowSessionID`
 - **Method:** `POST`
