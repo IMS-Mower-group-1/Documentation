@@ -11,8 +11,10 @@
   - **Code:** `200`
   - **Content:** Array of mow session objects
 - **Error Response:**
+  - **Code:** `400`
+  - **Content:** `{ error: Descriptive validation error message }`
   - **Code:** `500`
-  - **Content:** `{ error: 'Internal server error' }`
+  - **Content:** `{ error: 'An internal server error occurred.' }`
 
 ### 2. Get active mow session for a mower
 
@@ -23,8 +25,10 @@
   - **Code:** `200`
   - **Content:** Active mow session object
 - **Error Response:**
+  - **Code:** `400`
+  - **Content:** `{ error: Descriptive validation error message }`
   - **Code:** `500`
-  - **Content:** `{ error: 'Internal server error' }`
+  - **Content:** `{ error: 'An internal server error occurred.' }`
 
 ### 3. Start mow session for a mower
 
@@ -33,10 +37,12 @@
 - **URL Params:** `id=[string]` (Mower ID)
 - **Success Response:**
   - **Code:** `201`
-  - **Content:** `{ message: 'Mowing session started successfully', sessionId: [string] }`
+  - **Content:** `{ message: 'Mowing session started successfully', mowSessionId: [string] }`
 - **Error Response:**
+  - **Code:** `400`
+  - **Content:** `{ error: Descriptive validation error message }`
   - **Code:** `500`
-  - **Content:** `{ error: 'Internal server error' }`
+  - **Content:** `{ error: 'An internal server error occurred.' }`
 
 ### 4. End mow session for a mower
 
@@ -47,12 +53,28 @@
   - **Code:** `200`
   - **Content:** `{ message: 'Mowing session ended successfully' }`
 - **Error Response:**
+  - **Code:** `400`
+  - **Content:** `{ error: Descriptive validation error message }`
   - **Code:** `500`
-  - **Content:** `{ error: 'Internal server error' }`
+  - **Content:** `{ error: 'An internal server error occurred.' }`
 
 ## Position
 
-### 1. Update position
+### 1. Get current position
+
+- **URL:** `https://tgin13-1-q1387758.deta.app/position/:mowerID`
+- **Method:** `GET`
+- **URL Params:** `mowerID=[string]` (Mower ID)
+- **Success Response:**
+  - **Code:** `200`
+  - **Content:** `{ "x": [number], "y": [number] }` (Current position as an object)
+- **Error Response:**
+  - **Code:** `400`
+  - **Content:** `{ error: Descriptive validation error message }`
+  - **Code:** `500`
+  - **Content:** `{ error: 'An internal server error occurred.' }`
+
+### 2. Update position
 
 - **URL:** `https://tgin13-1-q1387758.deta.app/position/update/:id`
 - **Method:** `POST`
@@ -62,26 +84,16 @@
   - **Code:** `200`
   - **Content:** `{ message: "Position updated & added to the mowing session path" }`
 - **Error Response:**
+  - **Code:** `400`
+  - **Content:** `{ error: Descriptive validation error message }`
   - **Code:** `500`
-  - **Content:** `{ error: "Internal server error" }`
-
-### 2. Get position
-
-- **URL:** `https://tgin13-1-q1387758.deta.app/position/:id`
-- **Method:** `GET`
-- **URL Params:** `id=[string]` (Mower ID)
-- **Success Response:**
-  - **Code:** `200`
-  - **Content:** `"(x,y)"` (Current position as a string) 
-- **Error Response:**
-  - **Code:** `500`
-  - **Content:** `{ error: "Internal server error" }`
+  - **Content:** `{ error: 'An internal server error occurred.' }`
 
 ## Image
 
 ### 1. Upload image
 
-- **URL:** `/upload/:mowerID/:mowSessionID`
+- **URL:** ``https://tgin13-1-q1387758.deta.app/image/upload/:mowerID/:mowSessionID`
 - **Method:** `POST`
 - **URL Params:**
   - `mowerID=[string]` (Mower ID)
@@ -92,3 +104,6 @@
   - **Code:** `200`
 - **Error Response:**
   - **Code:** `400`
+  - **Content:** `{ error: Descriptive validation error message }`
+  - **Code:** `500`
+  - **Content:** `{ error: 'An internal server error occurred.' }`
