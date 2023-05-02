@@ -93,11 +93,10 @@
 
 ### 1. Upload image
 
-- **URL:** ``https://tgin13-1-q1387758.deta.app/image/upload/:mowerID/:mowSessionID`
+- **URL:** `https://tgin13-1-q1387758.deta.app/image/upload/:mowerID`
 - **Method:** `POST`
 - **URL Params:**
   - `mowerID=[string]` (Mower ID)
-  - `mowSessionID=[string]` (Mowing session ID)
 - **Content-Type:** `application/octet-stream`
 - **Data Params:** Binary image data (application/octet-stream)
 - **Success Response:**
