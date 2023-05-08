@@ -106,3 +106,18 @@
   - **Content:** `{ error: Descriptive validation error message }`
   - **Code:** `500`
   - **Content:** `{ error: 'An internal server error occurred.' }`
+
+### 2. Get Image URL
+
+- **URL:** `https://tgin13-1-q1387758.deta.app/image/getImageURL/:mowerID/:imageName`
+- **Method:** `GET`
+- **URL Params:**
+  - `mowerID=[string]` (Mower ID)
+  - `imageName=[string]` (Name of image in Firebase Storage)
+- **Success Response:**
+  - **Code:** `200`
+- **Error Response:**
+  - **Code:** `400`
+  - **Content:** `{ error: Descriptive validation error message }`
+  - **Code:** `500`
+  - **Content:** `{ error: 'An internal server error occurred.' }`
