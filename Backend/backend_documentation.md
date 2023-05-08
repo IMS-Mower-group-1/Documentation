@@ -5,6 +5,16 @@ To run the server you'll need a machine with NodeJS v17.1.0 or newer.
 3.  connect to the server using the link ```http://localhost:PORT``` (PORT will most likely be 3000)
 
 
+## High level requirements
+ 
+##### B1.1: The backend shall publish a REST API for reading and writing position data that is sent from the mower.
+The code that fulfills B1.1 can be found in - ```src/presentation/positionRouter.mjs```
+##### B1.2 The REST API shall contain a service for reading and writing image data. 
+The code that fulfills B1.2 can be found in - ```src/presentation/imageRouter.mjs```
+##### B1.3 When image data is written, the service shall perform an image classification via for example Google API.
+The code that fulfills B1.3 can be found in - ```src/presentation/imageRouter.mjs```
+
+
 ## Firebase
 As other teams were dependant on the API routes, it was important to quickly build the backend, thus Firebase was used. 
 ### Firestore
