@@ -62,9 +62,9 @@
 
 ### 1. Get current position
 
-- **URL:** `https://tgin13-1-q1387758.deta.app/position/:mowerID`
+- **URL:** `https://tgin13-1-q1387758.deta.app/position/:id`
 - **Method:** `GET`
-- **URL Params:** `ID=[string]` (Mower ID)
+- **URL Params:** `id=[string]` (Mower ID)
 - **Success Response:**
   - **Code:** `200`
   - **Content:** `{ "x": [number], "y": [number] }` (Current position as an object)
@@ -93,7 +93,7 @@
 
 ### 1. Upload image
 
-- **URL:** `https://tgin13-1-q1387758.deta.app/image/upload/:mowerID`
+- **URL:** `https://tgin13-1-q1387758.deta.app/image/upload/:id`
 - **Method:** `POST`
 - **URL Params:**
   - `id=[string]` (Mower ID)
@@ -109,7 +109,7 @@
 
 ### 2. Get Image URL
 
-- **URL:** `https://tgin13-1-q1387758.deta.app/image/getImageURL/:mowerID/:imageName`
+- **URL:** `https://tgin13-1-q1387758.deta.app/image/getImageURL/:id/:imageName`
 - **Method:** `GET`
 - **URL Params:**
   - `id=[string]` (Mower ID)
