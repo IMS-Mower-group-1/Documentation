@@ -64,7 +64,7 @@
 
 - **URL:** `https://tgin13-1-q1387758.deta.app/position/:mowerID`
 - **Method:** `GET`
-- **URL Params:** `mowerID=[string]` (Mower ID)
+- **URL Params:** `ID=[string]` (Mower ID)
 - **Success Response:**
   - **Code:** `200`
   - **Content:** `{ "x": [number], "y": [number] }` (Current position as an object)
@@ -96,7 +96,7 @@
 - **URL:** `https://tgin13-1-q1387758.deta.app/image/upload/:mowerID`
 - **Method:** `POST`
 - **URL Params:**
-  - `mowerID=[string]` (Mower ID)
+  - `id=[string]` (Mower ID)
 - **Content-Type:** `application/octet-stream`
 - **Data Params:** Binary image data (application/octet-stream)
 - **Success Response:**
@@ -112,7 +112,7 @@
 - **URL:** `https://tgin13-1-q1387758.deta.app/image/getImageURL/:mowerID/:imageName`
 - **Method:** `GET`
 - **URL Params:**
-  - `mowerID=[string]` (Mower ID)
+  - `id=[string]` (Mower ID)
   - `imageName=[string]` (Name of image in Firebase Storage)
 - **Success Response:**
   - **Code:** `200`
